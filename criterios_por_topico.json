@@ -1,0 +1,257 @@
+{
+  "Prefeitura": {
+      "1. INFORMAÇÕES PRIORITÁRIAS": {
+          "1.1 Possui sítio oficial próprio na internet?": ["Disponibilidade"],
+          "1.2 Possui portal da transparência próprio ou compartilhado na internet?": ["Disponibilidade"],
+          "1.3 O acesso ao portal transparência está visível na capa do site?": ["Disponibilidade"],
+          "1.4 O site contém ferramenta de pesquisa de conteúdo que permita o acesso à informação?": ["Disponibilidade"]
+      },
+      "2. INFORMAÇÕES INSTITUCIONAIS": {
+          "2.1 Divulga a estrutura organizacional?": ["Disponibilidade"],
+          "2.2 Divulga competências e/ou atribuições?": ["Disponibilidade"],
+          "2.3 Identifica o nome dos responsáveis pela gestão do Poder/Órgão?": ["Disponibilidade"],
+          "2.4 Divulga os endereços e telefones da entidade e e-mails institucionais?": ["Disponibilidade"],
+          "2.5 Divulga o horário de atendimento?": ["Disponibilidade"],
+          "2.6 Divulga os atos normativos próprios?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "2.7 Divulga as perguntas e respostas frequentes?": ["Disponibilidade"],
+          "2.8 Apresenta link para perfil em redes sociais?": ["Disponibilidade"],
+          "2.9 Inclui botão do Radar no site institucional?": ["Disponibilidade"]
+      },
+      "3. RECEITA": {
+          "3.1 Divulga as receitas do Poder ou órgão, evidenciando sua previsão e realização?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "3.2 Divulga a classificação orçamentária por natureza da receita (categoria econômica, origem, espécie)?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "3.3 Divulga a lista dos inscritos em dívida ativa, contendo, no mínimo, dados referentes ao nome do inscrito e o valor total da dívida?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "4. DESPESA": {
+          "4.1 Divulga o total das despesas empenhadas, liquidadas e pagas?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "4.2 Divulga as despesas por classificação orçamentária?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "4.3 Possibilita a consulta de empenhos com os detalhes do beneficiário do pagamento ou credor, o bem fornecido ou serviço prestado e a identificação do procedimento licitatório originário da despesa?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "5. CONVÊNIOS E TRANSFERÊNCIAS": {
+          "5.1 Identifica as transferências recebidas a partir da celebração de convênios/acordos com indicação, no mínimo, do valor total previsto dos recursos envolvidos, do valor recebido, do objeto e da origem (órgão repassador/concedente)?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "5.2 Identifica as transferências realizadas a partir da celebração de convênios/acordos/ajustes, com indicação, no mínimo, do beneficiário, do objeto, do valor total previsto para repasse e do valor concedido?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "5.3 Identifica os acordos firmados que não envolvam transferência de recursos financeiros, identificando as partes, o objeto e as obrigações ajustadas?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "6. RECURSOS HUMANOS": {
+          "6.1 Divulga a relação nominal dos servidores/autoridades/membros, seus cargos/funções, as respectivas lotações, as suas datas de admissão/exoneração/inativação e a carga horária do cargo/função ocupada/desempenhada?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "6.2 Identifica a remuneração nominal de cada servidor/autoridade/Membro e a tabela com o padrão remuneratório dos cargos e funções?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "6.3 Publica lista de estagiários?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "6.4 Publica lista dos terceirizados que prestam serviços para o Poder ou órgão/entidades, contendo, em relação a cada um deles: nome completo, função ou atividade exercida e nome da empresa empregadora?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "6.5 Divulga a íntegra dos editais de concursos e seleções públicas realizados pelo Poder ou órgão para provimento de cargos e empregos públicos?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "6.6 Divulga informações sobre os demais atos dos concursos públicos e processos seletivos do Poder ou órgão, contendo no mínimo a lista de aprovados com as classificações e as nomeações?": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "7. DIÁRIAS": {
+          "7.1 Divulga o nome e o cargo/função do beneficiário, além do valor total recebido, número de diárias usufruídas por afastamento, período de afastamento, motivo do afastamento e local de destino?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "7.2 Divulga tabela ou relação que explicite os valores das diárias dentro do Estado, fora do Estado e fora do país, conforme legislação local?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+      },
+      "8. LICITAÇÕES": {
+          "8.1 Divulga a relação das licitações em ordem sequencial, informando o número e modalidade licitatória, o objeto, a data, o valor estimado/homologado e a situação?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "8.2 Divulga a íntegra dos editais de licitação?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "8.3 Divulga a íntegra dos demais documentos das fases interna e externa das licitações?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "8.4 Divulga a íntegra dos principais documentos dos processos de dispensa e inexigibilidade de licitação?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "8.5 Divulga a íntegra das Atas de Adesão – SRP?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "8.6 Publica plano anual de contratações?": ["Disponibilidade", "Atualidade"],
+          "8.7 Divulga a relação dos licitantes e/ou contratados sancionados administrativamente pelo Poder ou órgão?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "9. CONTRATOS": {
+          "9.1 Divulga a relação dos contratos celebrados em ordem sequencial, com o seu respectivo resumo, contendo, no mínimo, indicação do contratado(a), do valor, do objeto e da vigência, bem como dos aditivos deles decorrentes?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "9.2 Divulga o inteiro teor dos contratos e dos respectivos termos aditivos?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "9.3 Divulga a relação/lista dos fiscais de cada contrato vigente e encerrado?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "9.4 Divulga a ordem cronológica de seus pagamentos, bem como as justificativas que fundamentaram a eventual alteração dessa ordem?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "10. OBRAS": {
+          "10.1 Divulga informações sobre as obras contendo o objeto, a situação atual, as datas de início e de conclusão da obra, empresa contratada e o percentual concluído?": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "10.2 Divulga os quantitativos, os preços unitários e totais contratados?": ["Disponibilidade", "Atualidade", "Gravação de Relatório"],
+          "10.3 Divulga os quantitativos executados e os preços efetivamente pagos?": ["Disponibilidade", "Atualidade", "Gravação de Relatório"],
+          "10.4 Divulga relação das obras paralisadas contendo o motivo, o responsável pela inexecução temporária do objeto do contrato e a data prevista para o reinício da sua execução?": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "11. PLANEJAMENTO E PRESTAÇÃO DE CONTAS": {
+          "11.1 Publica a Prestação de Contas do Ano Anterior (Balanço Geral)?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "11.2 Divulga o Relatório de Gestão ou Atividades?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "11.3 Divulga a íntegra da decisão da apreciação ou julgamento das contas pelo Tribunal de Contas?": ["Disponibilidade", "Atualidade", "Série Histórica"],
+          "11.4 Divulga o resultado do julgamento das Contas do Chefe do Poder Executivo pelo Poder Legislativo?": ["Disponibilidade", "Atualidade", "Série Histórica"],
+          "11.5 Divulga o Relatório de Gestão Fiscal (RGF)?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "11.6 Divulga o Relatório Resumido da Execução Orçamentária (RREO)?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "11.7 Divulga o plano estratégico institucional?": ["Disponibilidade"],
+          "11.8 Divulga a Lei do Plano Plurianual (PPA) e seus anexos?": ["Disponibilidade"],
+          "11.9 Divulga a Lei de Diretrizes Orçamentárias (LDO) e seus anexos?": ["Disponibilidade"],
+          "11.10 Divulga a Lei Orçamentária (LOA) e seus anexos?": ["Disponibilidade"]
+          
+      },
+      "12. SIC (SERVIÇO DE INFORMAÇÃO AO CIDADÃO)": {
+          "12.1 Existe o SIC no site e indica a unidade/setor responsável?": ["Disponibilidade"],
+          "12.2 Indica o endereço físico, o telefone e o e-mail da unidade responsável pelo SIC, além do horário de funcionamento?": ["Disponibilidade"],
+          "12.3 Há possibilidade de envio de pedidos de informação de forma eletrônica (e-SIC)?": ["Disponibilidade"],
+          "12.4 A solicitação por meio de eSic é simples, ou seja, sem a exigência de itens de identificação do requerente que dificultem ou impossibilitem o acesso à informação, tais como: envio de documentos, assinatura reconhecida, declaração de responsabilidade, maioridade?": ["Disponibilidade"],
+          "12.5 Divulga nesta seção, instrumento normativo local que regulamente a Lei nº 12.527/2011 – LAI?": ["Disponibilidade"],
+          "12.6 Divulga, na seção relativa ao e-SIC, os prazos de resposta ao cidadão, incluindo o recursal, e as autoridades competentes para o exame dos pedidos, além do procedimento referente à realização do pedido e de eventual recurso?": ["Disponibilidade"],
+          "12.7 Divulga relatório anual estatístico contendo a quantidade de pedidos de acesso recebidos, atendidos, indeferidos, bem como informações genéricas sobre os solicitantes?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "12.8 Divulga lista de documentos classificados em cada grau de sigilo, contendo pelo menos o assunto sobre o qual versa a informação, a categoria na qual ela se encontra, o dispositivo legal que fundamenta a classificação e o respectivo prazo?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "12.9 Divulga lista das informações que tenham sido desclassificadas nos últimos 12 (doze) meses?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "13. ACESSIBILIDADE": {
+          "13.1 O site oficial e o portal de transparência contêm símbolo de acessibilidade em destaque?": ["Disponibilidade"],
+          "13.2 O site e o portal de transparência contêm exibição do “caminho” de páginas percorridas pelo usuário?": ["Disponibilidade"],
+          "13.3 O site e o portal de transparência contêm opção de alto contraste?": ["Disponibilidade"],
+          "13.4 O site e o portal de transparência contêm ferramenta de redimensionamento de texto?": ["Disponibilidade"],
+          "13.5 Contém mapa do site institucional?": ["Disponibilidade"]
+      },
+      "14. OUVIDORIA": {
+          "14.1 Há informações sobre o atendimento presencial pela Ouvidoria (Indicação de endereço físico e telefone, além do horário de funcionamento)?": ["Disponibilidade"],
+          "14.2. Há canal eletrônico de acesso/interação com a ouvidoria?": ["Disponibilidade"],
+          "14.3 Divulga Carta de Serviços ao Usuário?": ["Disponibilidade"]
+      },
+      "15. LGPD E GOVERNO DIGITAL": {
+          "15.1 Identifica o encarregado/responsável pelo tratamento de dados pessoais e disponibiliza Canal de Comunicação (telefone e/ou e-mail)?": ["Disponibilidade"],
+          "15.2 Publica a sua Política de Privacidade e Proteção de Dados?": ["Disponibilidade"],
+          "15.3 Possibilita a demanda e o acesso a serviços públicos por meio digital, sem necessidade de solicitação presencial?": ["Disponibilidade"],
+          "15.4 Possibilita o acesso automatizado por sistemas externos em dados (estruturados e legíveis por máquina), e a página contém as regras de abertos utilização?": ["Disponibilidade"],
+          "15.5 Regulamenta a Lei Federal nº 14.129/2021 (Governo Digital) e divulga a normativa em seu portal?": ["Disponibilidade"],
+          "15.6 Realiza e divulga resultados de pesquisas de satisfação?": ["Disponibilidade"]
+      },
+      "16. RENÚNCIAS FISCAIS": {
+          "16.1 Divulga as desonerações tributárias concedidas e a fundamentação legal individualizada?": ["Disponibilidade"],
+          "16.2 Divulga os valores da renúncia fiscal prevista e realizada, por tipo ou espécie de benefício ou incentivo fiscal?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "16.3 Identifica os beneficiários das desonerações tributárias (benefícios ou incentivos fiscais)?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "16.4 Divulga informações sobre projetos de incentivo à cultura (incluindo esportivos), identificando os projetos aprovados, o respectivo beneficiárioe o valor aprovado?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "17. EMENDAS PARLAMENTARES": {
+          "17.1 Identifica as emendas parlamentares recebidas, contendo informações sobre a origem, a forma de repasse, o tipo de emenda, o número da emenda, a autoria, o valor previsto e realizado, o objeto e função de governo?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "17.2 Demonstra a execução orçamentária e financeira oriunda das emendas pix”?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "18. SAÚDE": {
+          "18.1 Divulga o plano de saúde, a programação anual e o relatório de gestão?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "18.2 Divulga informações relacionadas aos serviços de saúde, indicando os horários, os profissionais prestadores de serviços, as especialidades e local?": ["Disponibilidade", "Atualidade", "Filtro de Pesquisa"],
+          "18.3 Divulga a lista de espera de regulação para acesso às consultas,exames e serviços médicos ?": ["Disponibilidade"],
+          "18.4 Divulga lista dos medicamentos a serem fornecidos pelo SUS e informações de como obter medicamentos, incluindo os de alto custo?": ["Disponibilidade", "Atualidade", "Filtro de Pesquisa"],
+          "18.5 Divulga os estoques de medicamentos das farmácias públicas?": ["Disponibilidade", "Atualidade", "Filtro de Pesquisa"]
+      },
+      "19. EDUCAÇÃO": {
+          "19.1 Divulga o plano de educação e o respectivo relatório de resultados?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "19.2 Divulga a lista de espera em creches públicas e os critérios de priorização de acesso a elas?": ["Disponibilidade", "Atualidade"]
+      }
+  },
+  
+  
+    "Câmara": {
+      "1. INFORMAÇÕES PRIORITÁRIAS": {
+          "1.1 Possui sítio oficial próprio na internet?": ["Disponibilidade"],
+          "1.2 Possui portal da transparência próprio ou compartilhado na internet?": ["Disponibilidade"],
+          "1.3 O acesso ao portal transparência está visível na capa do site?": ["Disponibilidade"],
+          "1.4 O site contém ferramenta de pesquisa de conteúdo que permita o acesso à informação?": ["Disponibilidade"]
+      },
+      "2. INFORMAÇÕES INSTITUCIONAIS": {
+          "2.1 Divulga a estrutura organizacional?": ["Disponibilidade"],
+          "2.2 Divulga competências e/ou atribuições?": ["Disponibilidade"],
+          "2.3 Identifica o nome dos responsáveis pela gestão do Poder/Órgão?": ["Disponibilidade"],
+          "2.4 Divulga os endereços e telefones da entidade e e-mails institucionais?": ["Disponibilidade"],
+          "2.5 Divulga o horário de atendimento?": ["Disponibilidade"],
+          "2.6 Divulga os atos normativos próprios?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "2.7 Divulga as perguntas e respostas frequentes?": ["Disponibilidade"],
+          "2.8 Apresenta link para perfil em redes sociais?": ["Disponibilidade"],
+          "2.9 Inclui botão do Radar no site institucional?": ["Disponibilidade"]
+      },
+      "3. RECEITA": {
+        "3.1 Divulga as receitas do Poder ou órgão, evidenciando sua previsão e realização?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "4. DESPESA": {
+        "4.1 Divulga o total das despesas empenhadas, liquidadas e pagas?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+        "4.2 Divulga as despesas por classificação orçamentária?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+        "4.3 Possibilita a consulta de empenhos com os detalhes do beneficiário do pagamento ou credor, o bem fornecido ou serviço prestado e a identificação do procedimento licitatório originário da despesa?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "5. CONVÊNIOS E TRANSFERÊNCIAS": {
+        "5.1 Identifica as transferências recebidas a partir da celebração de convênios/acordos com indicação, no mínimo, do valor total previsto dos recursos envolvidos, do valor recebido, do objeto e da origem (órgão repassador/concedente)?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+        "5.2 Identifica as transferências realizadas a partir da celebração de convênios/acordos/ajustes, com indicação, no mínimo, do beneficiário, do objeto, do valor total previsto para repasse e do valor concedido?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+        "5.3 Identifica os acordos firmados que não envolvam transferência de recursos financeiros, identificando as partes, o objeto e as obrigações ajustadas?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "6. RECURSOS HUMANOS": {
+        "6.1 Divulga a relação nominal dos servidores/autoridades/membros, seus cargos/funções, as respectivas lotações, as suas datas de admissão/exoneração/inativação e a carga horária do cargo/função ocupada/desempenhada?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "6.2 Identifica a remuneração nominal de cada servidor/autoridade/Membro e a tabela com o padrão remuneratório dos cargos e funções?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "6.3 Publica lista de estagiários?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "6.4 Publica lista dos terceirizados que prestam serviços para o Poder ou órgão/entidades, contendo, em relação a cada um deles: nome completo, função ou atividade exercida e nome da empresa empregadora?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "6.5 Divulga a íntegra dos editais de concursos e seleções públicas realizados pelo Poder ou órgão para provimento de cargos e empregos públicos?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "6.6 Divulga informações sobre os demais atos dos concursos públicos e processos seletivos do Poder ou órgão, contendo no mínimo a lista de aprovados com as classificações e as nomeações?": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "7. DIÁRIAS": {
+        "7.1 Divulga o nome e o cargo/função do beneficiário, além do valor total recebido, número de diárias usufruídas por afastamento, período de afastamento, motivo do afastamento e local de destino?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "7.2 Divulga tabela ou relação que explicite os valores das diárias dentro do Estado, fora do Estado e fora do país, conforme legislação local?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+      },
+      "8. LICITAÇÕES": {
+        "8.1 Divulga a relação das licitações em ordem sequencial, informando o número e modalidade licitatória, o objeto, a data, o valor estimado/homologado e a situação?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "8.2 Divulga a íntegra dos editais de licitação?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "8.3 Divulga a íntegra dos demais documentos das fases interna e externa das licitações?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "8.4 Divulga a íntegra dos principais documentos dos processos de dispensa e inexigibilidade de licitação?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "8.5 Divulga a íntegra das Atas de Adesão – SRP?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "8.6 Publica plano anual de contratações?": ["Disponibilidade", "Atualidade"],
+          "8.7 Divulga a relação dos licitantes e/ou contratados sancionados administrativamente pelo Poder ou órgão?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "9. CONTRATOS": {
+        "9.1 Divulga a relação dos contratos celebrados em ordem sequencial, com o seu respectivo resumo, contendo, no mínimo, indicação do contratado(a), do valor, do objeto e da vigência, bem como dos aditivos deles decorrentes?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "9.2 Divulga o inteiro teor dos contratos e dos respectivos termos aditivos?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+          "9.3 Divulga a relação/lista dos fiscais de cada contrato vigente e encerrado?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "9.4 Divulga a ordem cronológica de seus pagamentos, bem como as justificativas que fundamentaram a eventual alteração dessa ordem?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "10. OBRAS": {
+        "10.1 Divulga informações sobre as obras contendo o objeto, a situação atual, as datas de início e de conclusão da obra, empresa contratada e o percentual concluído?": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "10.2 Divulga os quantitativos, os preços unitários e totais contratados?": ["Disponibilidade", "Atualidade", "Gravação de Relatório"],
+          "10.3 Divulga os quantitativos executados e os preços efetivamente pagos?": ["Disponibilidade", "Atualidade", "Gravação de Relatório"],
+          "10.4 Divulga relação das obras paralisadas contendo o motivo, o responsável pela inexecução temporária do objeto do contrato e a data prevista para o reinício da sua execução?": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "11. PLANEJAMENTO E PRESTAÇÃO DE CONTAS": {
+        "11.1 Publica a Prestação de Contas do Ano Anterior (Balanço Geral)?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+        "11.2 Divulga o Relatório de Gestão ou Atividades?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+        "11.3 Divulga a íntegra da decisão da apreciação ou julgamento das contas pelo Tribunal de Contas?": ["Disponibilidade", "Atualidade", "Série Histórica"],
+        "11.5 Divulga o Relatório de Gestão Fiscal (RGF)?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+        "11.7 Divulga o plano estratégico institucional?": ["Disponibilidade"],
+        "11.8 Divulga a Lei do Plano Plurianual (PPA) e seus anexos?": ["Disponibilidade"],
+        "11.9 Divulga a Lei de Diretrizes Orçamentárias (LDO) e seus anexos?": ["Disponibilidade"],
+        "11.10 Divulga a Lei Orçamentária (LOA) e seus anexos?": ["Disponibilidade"]
+      },
+      "12. SIC (SERVIÇO DE INFORMAÇÃO AO CIDADÃO)": {
+          "12.1 Existe o SIC no site e indica a unidade/setor responsável?": ["Disponibilidade"],
+          "12.2 Indica o endereço físico, o telefone e o e-mail da unidade responsável pelo SIC, além do horário de funcionamento?": ["Disponibilidade"],
+          "12.3 Há possibilidade de envio de pedidos de informação de forma eletrônica (e-SIC)?": ["Disponibilidade"],
+          "12.4 A solicitação por meio de eSic é simples, ou seja, sem a exigência de itens de identificação do requerente que dificultem ou impossibilitem o acesso à informação, tais como: envio de documentos, assinatura reconhecida, declaração de responsabilidade, maioridade?": ["Disponibilidade"],
+          "12.5 Divulga nesta seção, instrumento normativo local que regulamente a Lei nº 12.527/2011 – LAI?": ["Disponibilidade"],
+          "12.6 Divulga, na seção relativa ao e-SIC, os prazos de resposta ao cidadão, incluindo o recursal, e as autoridades competentes para o exame dos pedidos, além do procedimento referente à realização do pedido e de eventual recurso?": ["Disponibilidade"],
+          "12.7 Divulga relatório anual estatístico contendo a quantidade de pedidos de acesso recebidos, atendidos, indeferidos, bem como informações genéricas sobre os solicitantes?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "12.8 Divulga lista de documentos classificados em cada grau de sigilo, contendo pelo menos o assunto sobre o qual versa a informação, a categoria na qual ela se encontra, o dispositivo legal que fundamenta a classificação e o respectivo prazo?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+          "12.9 Divulga lista das informações que tenham sido desclassificadas nos últimos 12 (doze) meses?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+      },
+      "13. ACESSIBILIDADE": {
+          "13.1 O site oficial e o portal de transparência contêm símbolo de acessibilidade em destaque?": ["Disponibilidade"],
+          "13.2 O site e o portal de transparência contêm exibição do “caminho” de páginas percorridas pelo usuário?": ["Disponibilidade"],
+          "13.3 O site e o portal de transparência contêm opção de alto contraste?": ["Disponibilidade"],
+          "13.4 O site e o portal de transparência contêm ferramenta de redimensionamento de texto?": ["Disponibilidade"],
+          "13.5 Contém mapa do site institucional?": ["Disponibilidade"]
+      },
+      "14. OUVIDORIA": {
+          "14.1 Há informações sobre o atendimento presencial pela Ouvidoria (Indicação de endereço físico e telefone, além do horário de funcionamento)?": ["Disponibilidade"],
+          "14.2. Há canal eletrônico de acesso/interação com a ouvidoria?": ["Disponibilidade"],
+          "14.3 Divulga Carta de Serviços ao Usuário?": ["Disponibilidade"]
+      },
+      "15. LGPD E GOVERNO DIGITAL": {
+          "15.1 Identifica o encarregado/responsável pelo tratamento de dados pessoais e disponibiliza Canal de Comunicação (telefone e/ou e-mail)?": ["Disponibilidade"],
+          "15.2 Publica a sua Política de Privacidade e Proteção de Dados?": ["Disponibilidade"],
+          "15.3 Possibilita a demanda e o acesso a serviços públicos por meio digital, sem necessidade de solicitação presencial?": ["Disponibilidade"],
+          "15.4 Possibilita o acesso automatizado por sistemas externos em dados (estruturados e legíveis por máquina), e a página contém as regras de abertos utilização?": ["Disponibilidade"],
+          "15.5 Regulamenta a Lei Federal nº 14.129/2021 (Governo Digital) e divulga a normativa em seu portal?": ["Disponibilidade"],
+          "15.6 Realiza e divulga resultados de pesquisas de satisfação?": ["Disponibilidade"]
+    },
+    "20. ATIVIDADES FINALÍSTICAS – PL": {
+      "20.1 Divulga a composição da Casa, com a biografia dos parlamentares?": ["Disponibilidade"],
+      "20.2 Divulga as leis e atos infralegais (resoluções, decretos, etc.) produzidos?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+      "20.3 Divulga projetos de leis e de atos infralegais, bem como as respectivas tramitações (contemplando ementa, documentos anexos, situação atual, autor, relator)?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+      "20.4 Divulga a pauta das sessões do Plenário?": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"],
+      "20.5 Divulga a pauta das Comissões?": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"],
+      "20.6 Divulga as atas das sessões, incluindo a lista de presença dos parlamentares em cada sessão?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+      "20.7 Divulga lista sobre as votações nominais?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+      "20.8 Divulga o ato que aprecia as Contas do Chefe do Poder Executivo (Decreto) e o teor do julgamento (Ata ou Resumo da Sessão que aprovou ou rejeitou as contas)?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"],
+      "20.9 Há transmissão de sessões, audiências públicas, consultas públicas ou outras formas de participação popular via meios de comunicação como rádio, TV, internet, entre outros?": ["Disponibilidade"],
+      "20.10 Divulga a regulamentação e os valores relativos às cotas para exercício da atividade parlamentar/verba indenizatória?": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"],
+      "20.11 Divulga dados sobre as atividades legislativas dos parlamentares?": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+        
+      }
+    }
+  }
+  

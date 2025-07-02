@@ -1,0 +1,29 @@
+{
+  "1.1 Possui sítio oficial próprio na internet?": {
+    "explicacao": "O sítio oficial é o endereço eletrônico institucional do órgão, no qual devem estar disponíveis as informações exigidas por lei.",
+    "base_legal": "Art. 48, §1º, II, da LC nº 101/00 e arts. 3º, III, 6º, I, e 8º, §2º, da Lei nº 12.527/2011",
+    "classificacao": "Essencial",
+    "aplicavel_a": "Executivo, Legislativo, Judiciário, Tribunal de Contas, Ministério Público, Defensoria, Consórcios Públicos, Estatais Dependentes e Independentes",
+    "criterios": {
+      "Disponibilidade": "Os Poderes e órgãos devem manter sítio oficial próprio na internet. Sítios compartilhados não são aceitos. A ausência impede a avaliação dos demais critérios e resulta em transparência 0,00%."
+    }
+  },
+  "1.2 Possui portal da transparência próprio ou compartilhado na internet?": {
+    "explicacao": "O portal da transparência pode estar incorporado ao sítio oficial ou ser compartilhado com outro órgão, desde que mantenha clareza na apresentação das informações obrigatórias.",
+    "base_legal": "Lei Complementar nº 131/2009, art. 48-A",
+    "classificacao": "Essencial",
+    "aplicavel_a": "Executivo, Legislativo, Consórcios Públicos, Estatais Dependentes",
+    "criterios": {
+      "Disponibilidade": "O link para o portal deve estar funcional e apontar para ambiente próprio ou compartilhado. Sites desatualizados ou sem acesso devem ser considerados como não atendido."
+    }
+  },
+  "1.3 O acesso ao portal está visível na capa do site?": {
+    "explicacao": "O link de acesso ao portal da transparência deve estar claramente visível na página inicial do sítio oficial, preferencialmente em local de destaque.",
+    "base_legal": "PNTP 2025 - Recomendação Atricon",
+    "classificacao": "Complementar",
+    "aplicavel_a": "Executivo, Legislativo, Consórcios Públicos, Estatais Dependentes",
+    "criterios": {
+      "Disponibilidade": "O acesso deve estar disponível na capa do site, sem exigência de múltiplos cliques ou navegação complexa."
+    }
+  }
+}
