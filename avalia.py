@@ -3,47 +3,17 @@ import os
 import json
 from datetime import datetime
 from fpdf import FPDF
-import firebase_admin
-from firebase_admin import credentials, db
-import re
 
 # Diretórios
+AVALIACAO_DIR = "data/avaliacoes/"
 RELATORIO_DIR = "relatorios/"
-os.makedirs(RELATORIO_DIR, exist_ok=True)
-
-# Firebase - inicializar apenas uma vez
-if not firebase_admin._apps:
-    cred = credentials.Certificate("firebase_key.json")
-    firebase_admin.initialize_app(cred, {
-        'databaseURL': 'https://avalia-pntp-default-rtdb.firebaseio.com/'
-    })
-
-# Gerar chave segura
-def gerar_chave_firebase(municipio, tipo_orgao):
-    chave = f"{municipio}_{tipo_orgao}".lower()
-    chave = re.sub(r"[ .#/\\$\\[\\]]", "_", chave)
-    return chave
-
-# Firebase utils
-def salvar_no_firebase(municipio, tipo_orgao, respostas):
-    chave = gerar_chave_firebase(municipio, tipo_orgao)
-    ref = db.reference(f"avaliacoes/{chave}")
-    ref.set({
-        "municipio": municipio,
-        "tipo": tipo_orgao,
-        "respostas": respostas,
-        "data": datetime.now().strftime("%Y-%m-%d %H:%M")
-    })
-
-def carregar_do_firebase(municipio, tipo_orgao):
-    chave = gerar_chave_firebase(municipio, tipo_orgao)
-    ref = db.reference(f"avaliacoes/{chave}")
-    return ref.get()
-
-# Arquivos locais
 CRITERIOS_JSON = "criterios_por_topico.json"
 EXPLICACOES_JSON = "explicacoes_cartilha.json"
 
+os.makedirs(AVALIACAO_DIR, exist_ok=True)
+os.makedirs(RELATORIO_DIR, exist_ok=True)
+
+# Funções utilitárias
 def carregar_criterios(tipo_orgao):
     with open(CRITERIOS_JSON, "r", encoding="utf-8") as f:
         return json.load(f).get(tipo_orgao, {})
@@ -51,6 +21,29 @@ def carregar_criterios(tipo_orgao):
 def carregar_explicacoes():
     with open(EXPLICACOES_JSON, "r", encoding="utf-8") as f:
         return json.load(f)
+
+def listar_avaliacoes_salvas():
+    return [f for f in os.listdir(AVALIACAO_DIR) if f.endswith(".json")]
+
+def carregar_avaliacao_por_nome(nome_arquivo):
+    caminho = os.path.join(AVALIACAO_DIR, nome_arquivo)
+    if os.path.exists(caminho):
+        with open(caminho, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return None
+
+def salvar_avaliacao_nomeado(municipio, tipo_orgao, respostas):
+    nome_arquivo = f"{municipio.replace(' ', '_')}_{tipo_orgao}.json"
+    caminho = os.path.join(AVALIACAO_DIR, nome_arquivo)
+    dados = {
+        "municipio": municipio,
+        "tipo": tipo_orgao,
+        "respostas": respostas,
+        "data": datetime.now().strftime("%Y-%m-%d %H:%M")
+    }
+    with open(caminho, "w", encoding="utf-8") as f:
+        json.dump(dados, f, indent=2, ensure_ascii=False)
+    return dados
 
 def limpar_texto(texto):
     if not texto:
@@ -97,26 +90,26 @@ def gerar_pdf(dados):
     pdf.output(caminho)
     return caminho
 
-# Interface
-st.set_page_config(page_title="Avaliação Firebase", layout="wide")
-st.title("📋 Avaliação com Firebase (com validação)")
+# Interface Streamlit
+st.set_page_config(page_title="Avaliação PNTP", layout="wide")
+st.title("📋 Avaliação PNTP")
 
-municipio = st.text_input("Nome do Município:")
-tipo_orgao = st.radio("Tipo de órgão:", ["Prefeitura", "Câmara"])
+# Selecionar para continuar
+arquivos = listar_avaliacoes_salvas()
+avaliacao_selecionada = st.selectbox("📂 Selecione uma avaliação salva:", [""] + arquivos)
+
+ultima_avaliacao = carregar_avaliacao_por_nome(avaliacao_selecionada) if avaliacao_selecionada else None
+
+# Entrada de dados principais
+municipio = st.text_input("Nome do Município:", value=ultima_avaliacao["municipio"] if ultima_avaliacao else "")
+tipo_orgao = st.radio("Tipo de órgão:", ["Prefeitura", "Câmara"], index=["Prefeitura", "Câmara"].index(ultima_avaliacao["tipo"]) if ultima_avaliacao else 0)
 
 estrutura = carregar_criterios(tipo_orgao)
 explicacoes = carregar_explicacoes()
 respostas = {}
 opcoes = ["Atende", "Não Atende"]
 
-dados_antigos = carregar_do_firebase(municipio, tipo_orgao)
-
-def recuperar(topico, pergunta, criterio, campo):
-    try:
-        return dados_antigos["respostas"][topico][pergunta][criterio][campo]
-    except:
-        return ""
-
+# Preenchimento por tópico
 for topico, perguntas in estrutura.items():
     st.subheader(f"📂 {topico}")
     respostas[topico] = {}
@@ -131,12 +124,18 @@ for topico, perguntas in estrutura.items():
             if bloco.get("base_legal"):
                 st.markdown(f"📜 **Base legal:** {bloco['base_legal']}")
 
+            def recuperar(criterio, campo):
+                try:
+                    return ultima_avaliacao["respostas"][topico][pergunta][criterio][campo]
+                except:
+                    return ""
+
             status_disp = st.selectbox("Disponibilidade", opcoes,
                 key=f"{topico}_{pergunta}_disp",
-                index=opcoes.index(recuperar(topico, pergunta, "Disponibilidade", "status")) if dados_antigos else 0
+                index=opcoes.index(recuperar("Disponibilidade", "status")) if ultima_avaliacao and recuperar("Disponibilidade", "status") in opcoes else 0
             )
             obs_disp = st.text_input("Observação:", key=f"{topico}_{pergunta}_disp_obs",
-                value=recuperar(topico, pergunta, "Disponibilidade", "observacao") if dados_antigos else "")
+                value=recuperar("Disponibilidade", "observacao") if ultima_avaliacao else "")
             respostas[topico][pergunta]["Disponibilidade"] = {"status": status_disp, "observacao": obs_disp}
 
             if "Disponibilidade" in criterios and status_disp == "Não Atende":
@@ -150,31 +149,20 @@ for topico, perguntas in estrutura.items():
                         continue
                     status = st.selectbox(crit, opcoes,
                         key=f"{topico}_{pergunta}_{crit}_status",
-                        index=opcoes.index(recuperar(topico, pergunta, crit, "status")) if dados_antigos else 0
+                        index=opcoes.index(recuperar(crit, "status")) if ultima_avaliacao and recuperar(crit, "status") in opcoes else 0
                     )
                     obs = st.text_input("Observação:", key=f"{topico}_{pergunta}_{crit}_obs",
-                        value=recuperar(topico, pergunta, crit, "observacao") if dados_antigos else "")
+                        value=recuperar(crit, "observacao") if ultima_avaliacao else "")
                     respostas[topico][pergunta][crit] = {"status": status, "observacao": obs}
 
-# Botões
-if st.button("💾 Salvar no Firebase"):
-    if not municipio.strip():
-        st.warning("⚠️ Por favor, preencha o nome do município antes de salvar.")
-    else:
-        salvar_no_firebase(municipio, tipo_orgao, respostas)
-        st.success("✅ Avaliação salva com sucesso!")
+# Botões finais
+if st.button("💾 Salvar progresso atual"):
+    salvar_avaliacao_nomeado(municipio, tipo_orgao, respostas)
+    st.success("✅ Progresso salvo com sucesso!")
 
-if st.button("📄 Gerar Relatório PDF"):
-    if not municipio.strip():
-        st.warning("⚠️ Preencha o nome do município para gerar o relatório.")
-    else:
-        dados = {
-            "municipio": municipio,
-            "tipo": tipo_orgao,
-            "respostas": respostas,
-            "data": datetime.now().strftime("%Y-%m-%d %H:%M")
-        }
-        caminho_pdf = gerar_pdf(dados)
-        st.success("✅ PDF gerado com sucesso!")
-        with open(caminho_pdf, "rb") as f:
-            st.download_button("⬇️ Baixar PDF", f, file_name=os.path.basename(caminho_pdf))
+if st.button("📄 Salvar e Gerar Relatório PDF"):
+    dados = salvar_avaliacao_nomeado(municipio, tipo_orgao, respostas)
+    caminho_pdf = gerar_pdf(dados)
+    st.success("✅ Relatório gerado com sucesso!")
+    with open(caminho_pdf, "rb") as f:
+        st.download_button("⬇️ Baixar PDF", f, file_name=os.path.basename(caminho_pdf))
