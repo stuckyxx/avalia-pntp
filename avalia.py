@@ -65,26 +65,37 @@ def gerar_pdf(dados):
 
     for topico, perguntas in dados["respostas"].items():
         bloco_topico = []
+
         for pergunta, criterios in perguntas.items():
-            blocos_nao_atende = []
-            for crit, v in criterios.items():
-                if v["status"] == "Não Atende":
-                    linha = f"  - {crit}: {v['status']}"
-                    if v["observacao"]:
-                        linha += f" | Obs: {v['observacao']}"
-                    blocos_nao_atende.append(limpar_texto(linha))
-            if blocos_nao_atende:
-                bloco_topico.append((pergunta, blocos_nao_atende))
+            disp_status = criterios.get("Disponibilidade", {}).get("status", "")
+            disp_obs = criterios.get("Disponibilidade", {}).get("observacao", "")
+            outros_nao_atende = []
+
+            # Se DISPONIBILIDADE for "Não Atende", só ela entra no relatório
+            if disp_status == "Não Atende":
+                linha = f"- {pergunta}\n  - Disponibilidade: Não Atende"
+                if disp_obs:
+                    linha += f" | Obs: {disp_obs}"
+                bloco_topico.append(linha)
+            else:
+                # Verifica os outros critérios
+                for crit, v in criterios.items():
+                    if crit != "Disponibilidade" and v["status"] == "Não Atende":
+                        linha = f"  - {crit}: {v['status']}"
+                        if v["observacao"]:
+                            linha += f" | Obs: {v['observacao']}"
+                        outros_nao_atende.append(limpar_texto(linha))
+
+                if outros_nao_atende:
+                    bloco_topico.append(f"- {pergunta}")
+                    bloco_topico.extend(outros_nao_atende)
 
         if bloco_topico:
             pdf.set_font("Arial", "B", 13)
             pdf.cell(0, 10, limpar_texto(topico), ln=True)
             pdf.set_font("Arial", "", 11)
-            for pergunta, linhas in bloco_topico:
-                pdf.multi_cell(0, 8, limpar_texto(f"- {pergunta}"))
-                for linha in linhas:
-                    pdf.multi_cell(0, 7, linha)
-                pdf.ln(2)
+            for linha in bloco_topico:
+                pdf.multi_cell(0, 7, limpar_texto(linha))
             pdf.ln(3)
 
     pdf.output(caminho)
@@ -94,13 +105,10 @@ def gerar_pdf(dados):
 st.set_page_config(page_title="Avaliação PNTP", layout="wide")
 st.title("📋 Avaliação PNTP")
 
-# Selecionar para continuar
 arquivos = listar_avaliacoes_salvas()
 avaliacao_selecionada = st.selectbox("📂 Selecione uma avaliação salva:", [""] + arquivos)
-
 ultima_avaliacao = carregar_avaliacao_por_nome(avaliacao_selecionada) if avaliacao_selecionada else None
 
-# Entrada de dados principais
 municipio = st.text_input("Nome do Município:", value=ultima_avaliacao["municipio"] if ultima_avaliacao else "")
 tipo_orgao = st.radio("Tipo de órgão:", ["Prefeitura", "Câmara"], index=["Prefeitura", "Câmara"].index(ultima_avaliacao["tipo"]) if ultima_avaliacao else 0)
 
@@ -109,7 +117,6 @@ explicacoes = carregar_explicacoes()
 respostas = {}
 opcoes = ["Atende", "Não Atende"]
 
-# Preenchimento por tópico
 for topico, perguntas in estrutura.items():
     st.subheader(f"📂 {topico}")
     respostas[topico] = {}
@@ -118,7 +125,6 @@ for topico, perguntas in estrutura.items():
         respostas[topico][pergunta] = {}
         with st.expander(f"📝 {pergunta}", expanded=False):
             bloco = explicacoes.get(pergunta, {})
-
             if bloco.get("explicacao"):
                 st.info(f"ℹ️ {bloco['explicacao']}")
             if bloco.get("base_legal"):
@@ -132,7 +138,7 @@ for topico, perguntas in estrutura.items():
 
             status_disp = st.selectbox("Disponibilidade", opcoes,
                 key=f"{topico}_{pergunta}_disp",
-                index=opcoes.index(recuperar("Disponibilidade", "status")) if ultima_avaliacao and recuperar("Disponibilidade", "status") in opcoes else 0
+                index=opcoes.index(recuperar("Disponibilidade", "status")) if ultima_avaliacao else 0
             )
             obs_disp = st.text_input("Observação:", key=f"{topico}_{pergunta}_disp_obs",
                 value=recuperar("Disponibilidade", "observacao") if ultima_avaliacao else "")
@@ -149,13 +155,12 @@ for topico, perguntas in estrutura.items():
                         continue
                     status = st.selectbox(crit, opcoes,
                         key=f"{topico}_{pergunta}_{crit}_status",
-                        index=opcoes.index(recuperar(crit, "status")) if ultima_avaliacao and recuperar(crit, "status") in opcoes else 0
+                        index=opcoes.index(recuperar(crit, "status")) if ultima_avaliacao else 0
                     )
                     obs = st.text_input("Observação:", key=f"{topico}_{pergunta}_{crit}_obs",
                         value=recuperar(crit, "observacao") if ultima_avaliacao else "")
                     respostas[topico][pergunta][crit] = {"status": status, "observacao": obs}
 
-# Botões finais
 if st.button("💾 Salvar progresso atual"):
     salvar_avaliacao_nomeado(municipio, tipo_orgao, respostas)
     st.success("✅ Progresso salvo com sucesso!")
